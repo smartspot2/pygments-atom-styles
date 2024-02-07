@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pygments-atom-styles"
+version = "0.0.1"
+dependencies = ["pygments"]
+
+[project.entry-points."pygments.styles"]
+atomonelight = "atomonelight:AtomOneLightStyle"
+atomonedark = "atomonedark:AtomOneDarkStyle"
+atomonehalfdark = "atomonedark:AtomOneHalfDarkStyle"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
